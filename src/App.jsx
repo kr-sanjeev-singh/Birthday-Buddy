@@ -9,16 +9,17 @@ function App() {
         setPersons([]);
     };
     return (
-        <div>
-            <h1>{persons.length} birthday today</h1>
-            {persons.map((person) => (
-                <Person {...person} key={person.id} />
-            ))}
-            <button type="button" className="btn" onClick={handleClick}>
-                {" "}
-                Clear All
-            </button>
-        </div>
+        <main>
+            <section className="container">
+                <h3>{persons.length} birthdays today</h3>
+                {persons.map((person) => (
+                    <Person {...person} key={person.id} />
+                ))}
+                <button type="button" className="btn btn-block" onClick={handleClick}>
+                    clear all
+                </button>
+            </section>
+        </main>
     );
 }
 

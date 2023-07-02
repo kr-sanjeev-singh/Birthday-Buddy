@@ -1,14 +1,12 @@
 const Person = ({ image, name, age }) => {
     return (
-        <div style={{ display: "flex", alignItems: "center", gap: "0 1rem" }}>
+        <article className="person">
+            <img src={image} alt={name} className="img" />
             <div>
-                <img src={image} alt={name} style={{ width: "3rem" }} />
+                <h4>{name}</h4>
+                <p>{age} years</p>
             </div>
-            <div style={{ display: "flex", gap: "0 1rem" }}>
-                <h2>{name}</h2>
-                <h2>{age}</h2>
-            </div>
-        </div>
+        </article>
     );
 };
 export default Person;
